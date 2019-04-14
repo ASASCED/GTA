@@ -1,14 +1,39 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-title>
+            Ionic Blank
+        </ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+    <ion-grid>
+        <ion-row>
+            <ion-col size="6" *ngFor="let i of produc">
+                <ion-card>
+                    <ion-card-header>
+                        <ion-img [src]="i.img"></ion-img>
+                        <ion-card-title>{{i.nombre}}</ion-card-title>
+                        <ion-item lines="none" class="catHead">
+                            <ion-card-subtitle>
+                                <ion-label>Categorias: </ion-label>
+                            </ion-card-subtitle>
+                        </ion-item>
+                        <ion-row class="marTop">
+                            <ion-col size="4">
+                                <ion-badge color="tertiary">
+                                    <ion-label>Bebé</ion-label>
+                                </ion-badge>
+                            </ion-col>
+                            <ion-col size="4">
+                                <ion-badge color="primary">
+                                    <ion-label>Lacteos</ion-label>
+                                </ion-badge>
+                            </ion-col>
+                        </ion-row>
+                    </ion-card-header>
+                </ion-card>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
 </ion-content>
